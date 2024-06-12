@@ -1,6 +1,6 @@
 import React from 'react'
-import * as ReactDOM from "react-dom/client";
-import {Link} from 'react-router-dom'
+// import * as ReactDOM from "react-dom/client";
+// import {a} from 'react-router-dom'
 
 export default function Navbar(props) {
 
@@ -9,18 +9,18 @@ export default function Navbar(props) {
     <>
       <nav className={`navbar navbar-expand-lg bg-${props.mode}`} >
         <div className={`container-fluid text-${props.mode === 'dark' ? 'light' : 'dark'}`}>
-          <Link to='index.html' className={`navbar-brand text-${props.mode === 'dark' ? 'light' : 'dark'}`}>{props.title}</Link>
+          <a href='#' className={`navbar-brand text-${props.mode === 'dark' ? 'light' : 'dark'}`}>{props.title}</a>
           <button className="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon "></span>
           </button>
           <div className="collapse navbar-collapse " id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 ">
               <li className="nav-item ">
-                <Link className={`nav-link active text-${props.mode === 'dark' ? 'light' : 'dark'}`} aria-current="page" to='/'>Home</Link>
+                <a className={`nav-a active text-${props.mode === 'dark' ? 'light' : 'dark'}`} aria-current="page" href='#'>Home</a>
               </li>
-              <li className="nav-item">
-                <Link className={`nav-link text-${props.mode === 'dark' ? 'light' : 'dark'}`} to="./About.js">About</Link>
-              </li>
+              {/* <li className="nav-item">
+                <a className={`nav-a text-${props.mode === 'dark' ? 'light' : 'dark'}`} href="./About.js">About</a>
+              </li> */}
             </ul>
             <div className="form-check form-switch ">
               <input onClick={props.toggleMode} className={`form-check-input text-${props.mode === 'dark' ? 'light' : 'dark'}`} style={{marginRight:5}} type="checkbox" role="switch" id="flexSwitchCheckDefault" />
