@@ -4,8 +4,8 @@ import './App.css';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-// import About from './components/About';
-// import {Routes,Route} from 'react-router-dom'
+import About from './components/About';
+import {Routes,Route} from 'react-router-dom'
 
 
 function App() {
@@ -57,13 +57,13 @@ function App() {
     <>
       <Navbar title="TextUtlis" mode={mode} toggleMode={toggleMode}/>
       <div className="container">
-       <Alert alert={alert}/>
-      <TextForm heading ="Enter The Text" /> 
-        {/* <Routes>       */}
-          {/* <Route path='/' element={<><Alert alert={alert}/> <TextForm heading ="Enter The Text" /> </>} /> */}
+        <Routes>      
+          <Route path='/' element={<><Alert alert={alert}/> <TextForm heading ="Enter The Text" /> </>} />
+      {/* <Alert alert={alert}/>
+      <TextForm heading ="Enter The Text" />  */}
       {/* <RouterProvider router={router} /> */}
-        {/* <Route exact path='/About.js' element={<About/>}/> */}
-      {/* </Routes> */}
+        <Route exact path='/About.js' element={<About/>}/>
+      </Routes>
 
       </div>
     </>
