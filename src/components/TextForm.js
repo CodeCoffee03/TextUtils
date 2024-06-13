@@ -26,6 +26,8 @@ export default function TextForm(props) {
                     </div>
                </div>
                <button className="btn btn-primary" onClick={UperCaseconverter}>Convert to UpperCase</button>
+               <button className="btn btn-primary" onClick={LowerCaseconverter}>Convert to UpperCase</button>
+
                <div className="container">
                     <h3>Text Summary</h3>
                     <p>Word is {wordCount}</p>
