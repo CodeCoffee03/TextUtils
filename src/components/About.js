@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function About() {
+export default function About(props) {
   return (
-     <>
-     <table class="table">
+     <><div className="container">
+     <table className={`table-${props.mode} table`}>
   <thead>
     <tr>
       <th scope="col">#</th>
@@ -27,11 +27,12 @@ export default function About() {
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <td colSpan="2">Larry the Bird</td>
       <td>@twitter</td>
     </tr>
   </tbody>
 </table>
+</div>
      </>
   )
 }

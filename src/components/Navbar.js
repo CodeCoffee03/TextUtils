@@ -1,5 +1,5 @@
 import React from 'react'
-import * as ReactDOM from "react-dom/client";
+// import * as ReactDOM from "react-dom/client";
 import {Link} from 'react-router-dom'
 
 export default function Navbar(props) {

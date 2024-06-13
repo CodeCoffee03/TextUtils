@@ -29,7 +29,7 @@ export default function TextForm(props) {
                <div className="container">
                     <h3>Text Summary</h3>
                     <p>Word is {wordCount}</p>
-                    <p> Character is {text.length}</p>
+                    <p> Character is {text.replace(/\s/g, '').length}</p>
                     
                     <h1> noraml timetaken to read</h1>
                     <p>Time - {0.008 * wordCount}min</p>

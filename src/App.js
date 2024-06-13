@@ -14,15 +14,6 @@ function App() {
 
 
   const [alert, setAlert] = useState(null);
-
-
-  // const router = createBrowserRouter([
-  //   {
-  //     path: "/About",
-  //     element:<><About/></>,
-  //   },
-  // ]);
-
   const showAlert =(message,type)=>
     {
       setAlert(
@@ -33,6 +24,8 @@ function App() {
       )
     } 
  
+
+
 
   const toggleMode  = ()=>
     {
@@ -51,7 +44,7 @@ function App() {
           document.body.classList.add('bg-dark','text-light');
           document.body.classList.remove('bg-light','text-dark');
         }
-    }
+   }
   
   return (
     <>
@@ -62,7 +55,7 @@ function App() {
       {/* <Alert alert={alert}/>
       <TextForm heading ="Enter The Text" />  */}
       {/* <RouterProvider router={router} /> */}
-        <Route exact path='/About.js' element={<About/>}/>
+        <Route exact path='/About.js' mode={mode}  element={<About mode={mode} />}/>
       </Routes>
 
       </div>
